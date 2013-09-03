@@ -13,7 +13,7 @@ angular.module('tags-input', []).directive('tagsInput', function() {
         template: '<div class="ngTagsInput {{ cssClass }}">' +
                   '  <input type="text" placeholder="{{ placeholder }}" size="{{ placeholder.length }}" maxlength="{{ maxLength }}" tabindex="{{ tabindex }}" ng-model="newTag">' +
                   '  <ul>' +
-                  '    <li ng-repeat="tag in tags" ng-class="getCssClass($index)"><span>{{ tag }}</span><button type="button" ng-click="remove($index)">{{ removeTagSymbol }}</button></li>' +
+                  '    <li ng-repeat="tag in tags" ng-class="getCssClass($index)" ng-click="remove($index)"><span>{{ tag }}</span></li>' +
                   '  </ul>' +
                   '</div>',
         controller: ['$scope', '$attrs', function($scope, $attrs) {
